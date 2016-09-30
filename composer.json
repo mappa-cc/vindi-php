@@ -1,12 +1,12 @@
 {
-    "name": "vindi/vindi-php",
-    "description": "SDK Vindi para PHP.",
+    "name": "vindi-php-laravel-4",
+    "description": "SDK Vindi para Laravel 4.",
     "keywords": [
         "vindi",
         "vindi-php",
         "vindi-php-sdk"
     ],
-    "homepage": "https://github.com/vindi/vindi-php",
+    "homepage": "https://github.com/mappa-cc/vindi-php",
     "license": "GPL-3.0",
     "authors": [
         {
