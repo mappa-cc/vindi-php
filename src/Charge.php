@@ -47,8 +47,8 @@ class Charge extends Resource
      *
      * @return mixed
      */
-    public function refund($id)
+    public function refund($id, array $form_params = [])
     {
-        return $this->post($id, 'refund');
+        return $this->post($id, 'refund', $form_params);
     }
 }
