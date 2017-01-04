@@ -26,8 +26,12 @@ class WebhookHandler
                 throw new \Exception('Unable to decode JSON from post body!');
             }
 
-            reset($decoded);
-            $event = current($decoded); // get first attribute from array, e.g.: event.
+            $att = get_object_vars($decoded);
+            $att = array_keys($att)[0];
+            $event = $decoded->{$att};
+
+            // reset($decoded);
+            // $event = current($decoded); // get first attribute from array, e.g.: event.
 
             return $event;
         } catch (\Exception $e) {
