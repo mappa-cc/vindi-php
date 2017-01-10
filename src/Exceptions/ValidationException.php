@@ -12,6 +12,11 @@ class ValidationException extends RequestException
     {
         parent::__construct($status, $errors, $lastOptions);
 
-        $this->message     = "Erros de validação foram encontrados!";
+        $this->message = 'Erros de validação foram encontrados!';
+        if(isset($errors['parameter'])) {
+            $this->message = $errors['parameter'] . ': ' . $errors['message'];
+        } else {
+            $this->message = $errors['message'];
+        }
     }
 }
